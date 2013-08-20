@@ -4,6 +4,7 @@
 <%@page import="java.util.Map"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@page import="payzippyApi.*"%>
 <html>
 <head>
 <title>Payzippy Charging API</title>
@@ -17,7 +18,7 @@ select,textarea,input[type="text"],input[type="password"],input[type="datetime"]
 
 </head>
 <body>
-	<form class="form-horizontal" method="post" action="chargingSDK1.jsp">
+	<form class="form-horizontal" method="post" action="charge">
 		<fieldset>
 
 			<!-- Form Name -->

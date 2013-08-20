@@ -4,31 +4,5 @@
 
 <web-app>
 	<display-name>Archetype Created Web Application</display-name>
-	<servlet>
-		<servlet-name>Charging</servlet-name>
-		<servlet-class>pg.Charging</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>Refund</servlet-name>
-		<servlet-class>pg.Refund</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>Query</servlet-name>
-		<servlet-class>pg.Query</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>Charging</servlet-name>
-		<url-pattern>/charge</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>Refund</servlet-name>
-		<url-pattern>/refund</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>Query</servlet-name>
-		<url-pattern>/query</url-pattern>
-	</servlet-mapping>
-	
-	
-	
+		
 </web-app>
