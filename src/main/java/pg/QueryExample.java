@@ -16,7 +16,7 @@ public class QueryExample
 
 		QueryResponse queryResponse =
 		        new QueryResponse(WebClient.INSTANCE.doQuery(queryRequest.getRequestParams(),
-		                "http://localhost:8080/payment/api/query/v1"));
+		                ConfigInit.QUERY_URL));
 
 		System.out.println(queryResponse.getResponseParams());
 		if (queryResponse.isValidResponse(secretKey))
