@@ -17,6 +17,11 @@ select,textarea,input[type="text"],input[type="password"],input[type="datetime"]
 
 </head>
 <body>
+	<%@ include file="header.html" %>
+	<div class="container-fluid">
+	<div class="span10">
+    <p class="text-info">This page corresponds to your final checkout page.</p>
+    </div>
 	<form class="form-horizontal" method="post" action="chargingSDK1.jsp">
 		<fieldset>
 

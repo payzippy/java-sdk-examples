@@ -1,4 +1,4 @@
-<%@page import="pg.ConfigInit"%>
+<%@page import="pg.ConfigReader"%>
 <%@page import="java.util.Enumeration"%>
 <%@page import="java.util.HashMap"%>
 <%@page import="java.util.Map"%>
@@ -17,7 +17,10 @@ select,textarea,input[type="text"],input[type="password"],input[type="datetime"]
 	
 </head>
 <body>
+<%@ include file="header.html" %>
+	<div class="container-fluid">
 <%
+	
 	out.println("<CENTER> <h1> RESPONSE PARAMETERS: </h1>");
 	String msg = "";
 	Enumeration keys = request.getParameterNames();
@@ -32,7 +35,7 @@ select,textarea,input[type="text"],input[type="password"],input[type="datetime"]
 	if (requestParams.size() == 0)
 		return;
 	ChargingResponse chargingResponse=new ChargingResponse(requestParams);
-	if(chargingResponse.isValidResponse(ConfigInit.SECRET_KEY)){
+	if(chargingResponse.isValidResponse(ConfigReader.config.getProperty("SECRET_KEY"))){
 		out.println("<p class='text-success' ><b>VALID RESPONSE<BR/></p>");
 		if(chargingResponse.isSuccess()){
 			out.println("<p class='text-success' >");

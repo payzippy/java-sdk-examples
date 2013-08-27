@@ -1,5 +1,1 @@
-Change the parameter in src/main/java/pg/ConfigInit
-Replace MERCHANT_ID,MERCHANT_KEY_ID,SECRET_KEY with your parmeters
-Change CHARGING_URL,REFUND_URL,QUERY_URL to the ones specified in api-reference manual (for charging it should be like this https://www.payzippy.com/payment/api/charging/v1).
-Add the app to server and hit the charging.jsp to test charging example.
-For Query and Refund example you can run main method as JavaApplication from src/main/java/pg QueryExample.java & RefundExample.java
+Payzippy Java SDK

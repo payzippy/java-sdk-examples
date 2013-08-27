@@ -1,6 +1,6 @@
 
 <%@page import="utils.WebClient"%>
-<%@page import="pg.ConfigInit"%>
+<%@ page import="pg.ConfigReader" %>
 <%@page import="payzippyApi.*"%>
 <html>
 <head>
@@ -11,8 +11,8 @@
 		try
 		{
 			ChargingRequest chargingRequest =
-			        (ChargingRequest.getBuilder()).setMerchantId(ConfigInit.MERCHANT_ID)
-			                .setMerchantKeyId(ConfigInit.MERCHANT_KEY_ID)
+			        (ChargingRequest.getBuilder()).setMerchantId(ConfigReader.config.getProperty("MERCHANT_ID"))
+			                .setMerchantKeyId(ConfigReader.config.getProperty("MERCHANT_KEY_ID"))
 			                .setMerchantTransactionId(request.getParameter("merchant_transaction_id"))
 			                .setBuyerEmailId(request.getParameter("buyer_email_address"))
 			                .setTransactionAmount(request.getParameter("transaction_amount"))
@@ -21,7 +21,7 @@
 			                .setUiMode(request.getParameter("ui_mode")).setHashMethod("sha256")
 			                .setTransactionType(request.getParameter("transaction_type"))
 			                .putParams("callback_url", "http://localhost:8080/payzippy-api-test/chargingResp.jsp")
-			                .build(ConfigInit.SECRET_KEY);
+			                .build(ConfigReader.config.getProperty("SECRET_KEY"));
 
 			if (request.getParameter("ui_mode").equals("REDIRECT"))
 			{
@@ -31,8 +31,8 @@
 			}
 			else if (request.getParameter("ui_mode").equals("IFRAME"))
 			{
-				request.setAttribute("charging_url", chargingRequest.getUrl(ConfigInit.CHARGING_URL));
-				request.getRequestDispatcher("/charge-iframe.jsp").forward(request, response);
+				request.setAttribute("charging_url", chargingRequest.getUrl(ConfigReader.config.getProperty("CHARGING_URL")));
+				request.getRequestDispatcher("charge-iframe.jsp").forward(request, response);
 			}
 		}
 		catch (Exception e)
