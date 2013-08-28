@@ -23,8 +23,8 @@ select,textarea,input[type="text"],input[type="password"],input[type="datetime"]
         This examples includes the all parameters that can be sent in the Charging Request. The required ones
         are in bold.
     </p>
-</div>
-
+	</div>
+<div class="clearfix"></div>
 <form class="form-horizontal" method="post" action="chargingSDK2.jsp">
 <fieldset>
 <div class="well well-small span6">
@@ -97,6 +97,7 @@ select,textarea,input[type="text"],input[type="password"],input[type="datetime"]
         <div class="controls">
             <select id="ui_mode" name="ui_mode" class="input-xlarge">
                 <option value="IFRAME">IFRAME</option>
+                <option value="REDIRECT">REDIRECT</option>
             </select>
         </div>
     </div>

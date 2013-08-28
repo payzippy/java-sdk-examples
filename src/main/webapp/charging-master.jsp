@@ -97,6 +97,7 @@ select,textarea,input[type="text"],input[type="password"],input[type="datetime"]
         <div class="controls">
             <select id="ui_mode" name="ui_mode" class="input-xlarge">
                 <option value="IFRAME">IFRAME</option>
+                <option value="REDIRECT">REDIRECT</option>
             </select>
         </div>
     </div>

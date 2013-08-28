@@ -1,13 +1,15 @@
 To run the examples
-
-1. Unzip the test war file{ Run the following command in shell : jar xf war_file_name.war}
-2. Set up your config details, fill the details provided by PayZippy, in extracted_war_dir/WEB_INF/classes/config.properties file.
+1. create a new dir {mkdir testapi} and move to that dir { cd testapi}
+2. Unzip the test war file in the testapi{ Run the following command in shell : jar xf path_of_the_war_file/war_file_name.war}
+3. Set up your config details, fill the details provided by PayZippy, in testapi/WEB_INF/classes/config.properties file.
 	MERCHANT_ID Your Merchant ID
 	MERCHANT_KEY_ID Your Merchant Key ID
+	CALLBACK_URL http://your_server_ip:port/payzippy-api-test, Replace you server ip and port
 	CHARGING_URL Charging Request Url given in reference manual (https://www.payzippy.com/payment/api/charging/v1)
 	REFUND_URL REFUND Request Url given in reference manual (https://www.payzippy.com/payment/api/refund/v1)
 	QUERT_URL QUERY Request Url given in reference manual (https://www.payzippy.com/payment/api/query/v1)
-3. After changing config file create a war from the extracted_war_dir {Run following command in shell : jar cvf war_file_name.war .}
-4. Deploy it in your java http web server (like tomcat) to test charing example
-5. Run QueryExample in src/main/java/pg as javaApplication to test Query Api
-6. Run RefundExample in src/main/java/pg as javaApplication to test Refund Api
+4. After changing config file create a war from the testapi dir {Run following command in shell : jar cvf payzippy-api-test.war ./ }
+5. Deploy it in your java http web server (like for tomcat paste the war to webapps folder ).
+6. To test charing example hit http://your_server_address:port/payzippy-api-test/
+7. Run QueryExample in src/main/java/pg as javaApplication to test Query Api
+8. Run RefundExample in src/main/java/pg as javaApplication to test Refund Api

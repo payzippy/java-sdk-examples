@@ -2,7 +2,6 @@
 
 <%@page import="pg.ConfigReader"%>
 <%@page import="payzippyApi.*"%>
-<%@page import="pg.ConfigReader" %>
 <%
 	try
 	{
@@ -16,7 +15,7 @@
 		                .setCurrency(request.getParameter("currency"))
 		                .setUiMode(request.getParameter("ui_mode")).setHashMethod("sha256")
 		                .setTransactionType(request.getParameter("transaction_type"))
-		                .putParams("callback_url", "http://localhost:8080/payzippy-api-test/chargingResp.jsp")
+		                .putParams("callback_url", ConfigReader.config.getProperty("CALLBACK_URL"))
 		                .build(ConfigReader.config.getProperty("SECRET_KEY"));
 		if (request.getParameter("ui_mode").equals("REDIRECT"))
 		{

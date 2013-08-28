@@ -47,8 +47,9 @@
 
 		<p>To run the examples
 		<ol>
+			<li>Unzip the test war file{ Run the following command in shell : <code>jar xf war_file_name.war</code>}</li>
 			<li>Set up your config details, fill the details provided by
-				PayZippy, in <code>payzippy-api-test/src/main/java/pg/ConfigInit.java</code>
+				PayZippy, in <code>extracted_war_dir/WEB_INF/classes/config.properties</code>
 				file.
 				<ul>
 					<li><code>MERCHANT_ID</code> Your Merchant ID</li>
@@ -63,14 +64,17 @@
 						reference manual (https://www.payzippy.com/payment/api/query/v1)</li>
 				</ul>
 			</li>
+			<li>After changing config file create a war out of extracted_war_dir {Run following command in shell : <code>jar cvf war_file_name.war .</code>}</li>
+			
+			<li>Deploy it in your java http web server (like
+				tomcat) to test charing example</li>
+				
 			<li>Run <code>QueryExample</code> in src/main/java/pg as
 				javaApplication to test Query Api
 			</li>
 			<li>Run <code>RefundExample</code> in src/main/java/pg as
 				javaApplication to test Refund Api
 			</li>
-			<li>Create war and deploy it in your java http web server (like
-				tomcat) to test charing example</li>
 		</ol>
 		</p>
 

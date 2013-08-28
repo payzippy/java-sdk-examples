@@ -98,8 +98,8 @@ select,textarea,input[type="text"],input[type="password"],input[type="datetime"]
 					<label class="control-label">UI Integration Mode</label>
 					<div class="controls">
 						<select id="ui_mode" name="ui_mode" class="input-xlarge">
-							<option>REDIRECT</option>
-							<option>IFRAME</option>
+							<option value="REDIRECT">REDIRECT</option>
+							<option value="IFRAME">IFRAME</option>
 						</select>
 					</div>
 				</div>

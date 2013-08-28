@@ -5,7 +5,6 @@
 <%
 	try
 	{
-		System.out.println("charging request initiated");
 		ChargingRequestBuilder chargingBuilder=ChargingRequest.getBuilder();
 		for(Object k : request.getParameterMap().keySet()){
 			chargingBuilder.putParams((String)k,request.getParameter((String)k));
@@ -13,7 +12,7 @@
 		ChargingRequest chargingRequest =
 		        chargingBuilder.setMerchantId(ConfigReader.config.getProperty("MERCHANT_ID"))
 		                .setMerchantKeyId(ConfigReader.config.getProperty("MERCHANT_KEY_ID"))
-		                .putParams("callback_url", "http://localhost:8080/payzippy-api-test/chargingResp.jsp")
+		                .putParams("callback_url", ConfigReader.config.getProperty("CALLBACK_URL"))
 		                .build(ConfigReader.config.getProperty("SECRET_KEY"));
 		
 		if (request.getParameter("ui_mode").equals("REDIRECT"))
