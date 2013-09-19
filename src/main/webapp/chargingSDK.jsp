@@ -1,7 +1,7 @@
 
 
 <%@page import="pg.ConfigReader"%>
-<%@page import="payzippyApi.*"%>
+<%@page import="com.payzippy.sdk.*" %>
 <%
 	try
 	{

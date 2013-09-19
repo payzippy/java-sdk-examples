@@ -1,14 +1,13 @@
 
-<%@page import="utils.WebClient"%>
+<%@page import="com.payzippy.sdk.utils.WebClient"%>
 <%@ page import="pg.ConfigReader" %>
-<%@page import="payzippyApi.*"%>
+<%@page import="com.payzippy.sdk.*" %>
 <html>
 <head>
 
 </head>
 <body>
 	<%
-		out.println("adsadsadads");
 		try
 		{
 			ChargingRequest chargingRequest =
@@ -35,19 +34,11 @@
 				request.setAttribute("charging_url", chargingRequest.getUrl(ConfigReader.config.getProperty("CHARGING_URL")));
 				request.getRequestDispatcher("charge-iframe.jsp").forward(request, response);
 			}
-			else
-			{
-				out.println("ui_mode mismatch");
-			}
+		
 		}
 		catch (Exception e)
 		{
-			for(StackTraceElement ele : e.getStackTrace())
-			{
-				out.println(ele.toString());
-			}
 			e.printStackTrace();
-			response.getWriter().println(e.getMessage());
 		}
 	%>
 </body>

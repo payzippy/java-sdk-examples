@@ -18,7 +18,7 @@ select,textarea,input[type="text"],input[type="password"],input[type="datetime"]
 <body>
 	<%@ include file="header.html" %>
 	<div class="container-fluid">
-	<div class="span10">
+	<div class="span12">
     <p class="text-info">
         This examples includes the all parameters that can be sent in the Charging Request. The required ones
         are in bold.
@@ -337,7 +337,7 @@ select,textarea,input[type="text"],input[type="password"],input[type="datetime"]
     </div>
 
 </div>
-
+<div class="clearfix"></div>
 
 <div class="well well-small span6">
     <legend>PayZippy Fraud Parameters</legend>

@@ -7,7 +7,7 @@ To run the examples
 	CALLBACK_URL http://your_server_ip:port/payzippy-api-test, Replace you server ip and port
 	CHARGING_URL Charging Request Url given in reference manual (https://www.payzippy.com/payment/api/charging/v1)
 	REFUND_URL REFUND Request Url given in reference manual (https://www.payzippy.com/payment/api/refund/v1)
-	QUERT_URL QUERY Request Url given in reference manual (https://www.payzippy.com/payment/api/query/v1)
+	QUERY_URL QUERY Request Url given in reference manual (https://www.payzippy.com/payment/api/query/v1)
 4. After changing config file create a war from the testapi dir {Run following command in shell : jar cvf payzippy-api-test.war ./ }
 5. Deploy it in your java http web server (like for tomcat paste the war to webapps folder ).
 6. To test charing example hit http://your_server_address:port/payzippy-api-test/

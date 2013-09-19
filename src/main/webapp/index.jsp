@@ -23,7 +23,7 @@
 
 		<pre>
 
-    |- payzippyApi
+    |- com.payzippy.sdk
         |- ChargingRequest.java
         |- ChargignRequestBuilder.java
         |- ChargingResponse.java
@@ -33,7 +33,7 @@
         |- RefundRequest.java
         |- RefundRequestBuilder.java
         |- RefundResponse.java
-    |- utils
+    |- com.payzippy.sdk.utils
     	|- HashUtils.java
     	|- RequestUtil.java
     	|- ValidityCheck.java
@@ -60,7 +60,7 @@
 					<li><code>REFUND_URL</code> REFUND Request Url given in
 						reference manual (https://www.payzippy.com/payment/api/refund/v1)
 					</li>
-					<li><code>QUERT_URL</code> QUERY Request Url given in
+					<li><code>QUERY_URL</code> QUERY Request Url given in
 						reference manual (https://www.payzippy.com/payment/api/query/v1)</li>
 				</ul>
 			</li>

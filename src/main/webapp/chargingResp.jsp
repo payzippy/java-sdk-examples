@@ -3,7 +3,7 @@
 <%@page import="java.util.HashMap"%>
 <%@page import="java.util.Map"%>
 <%@page import="java.io.PrintWriter"%>
-<%@page import="payzippyApi.*" %>
+<%@page import="com.payzippy.sdk.*" %>
 <html>
 <head>
 <title>CallBack Page</title>
