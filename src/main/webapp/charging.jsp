@@ -76,6 +76,7 @@ select,textarea,input[type="text"],input[type="password"],input[type="datetime"]
 					<div class="controls">
 						<select id="payment_method" name="payment_method"
 							class="input-xlarge">
+							<option>PAYZIPPY</option>
 							<option>CREDIT</option>
 							<option>DEBIT</option>
 							<option>EMI</option>
