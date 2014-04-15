@@ -1,6 +1,6 @@
 To run the examples
 1. create a new dir {mkdir testapi} and move to that dir { cd testapi}
-2. Unzip the test war file in the testapi{ Run the following command in shell : jar xf path_of_the_war_file/war_file_name.war}
+2. Unzip the payzippy-api-test war file from target/ in the testapi{ Run the following command in shell : jar xf path_of_the_war_file/war_file_name.war}
 3. Set up your config details, fill the details provided by PayZippy, in testapi/WEB_INF/classes/config.properties file.
 	MERCHANT_ID Your Merchant ID
 	MERCHANT_KEY_ID Your Merchant Key ID
