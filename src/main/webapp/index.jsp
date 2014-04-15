@@ -43,47 +43,10 @@
 
 		<hr />
 
-		<h3>Setup</h3>
-
-		<p>To run the examples
-		<ol>
-			<li>Unzip the test war file{ Run the following command in shell : <code>jar xf war_file_name.war</code>}</li>
-			<li>Set up your config details, fill the details provided by
-				PayZippy, in <code>extracted_war_dir/WEB_INF/classes/config.properties</code>
-				file.
-				<ul>
-					<li><code>MERCHANT_ID</code> Your Merchant ID</li>
-					<li><code>MERCHANT_KEY_ID</code> Your Merchant Key ID</li>
-					<li><code>CHARGING_URL</code> Charging Request Url given in
-						reference manual
-						(https://www.payzippy.com/payment/api/charging/v1)</li>
-					<li><code>REFUND_URL</code> REFUND Request Url given in
-						reference manual (https://www.payzippy.com/payment/api/refund/v1)
-					</li>
-					<li><code>QUERY_URL</code> QUERY Request Url given in
-						reference manual (https://www.payzippy.com/payment/api/query/v1)</li>
-				</ul>
-			</li>
-			<li>After changing config file create a war out of extracted_war_dir {Run following command in shell : <code>jar cvf war_file_name.war .</code>}</li>
-			
-			<li>Deploy it in your java http web server (like
-				tomcat) to test charing example</li>
-				
-			<li>Run <code>QueryExample</code> in src/main/java/pg as
-				javaApplication to test Query Api
-			</li>
-			<li>Run <code>RefundExample</code> in src/main/java/pg as
-				javaApplication to test Refund Api
-			</li>
-		</ol>
-		</p>
-
-		<hr />
-
 		<h3>Examples</h3>
 
 		<p>
-			To check out the sample SDK integrations, go the <a
+			To check out the sample SDK integrations, go to the <a
 				href="charging.jsp">SDK Integration Examples</a> page.
 		</p>
 		<hr />
@@ -96,12 +59,12 @@
 				<code> ChargingRequest.getBuilder() </code>
 				then set the parameters using setters
 				<code> builder.setMerchantId("merchant_id") </code>
-				or if setter is not present use putParams
+				or if setter is not present for some particular parameter use putParams
 				<code> builder.putParams(parameterKey,parameterValue) </code>
-				. When all the parameter has been set use build method on
+				. After setting the parameters use build method on
 				ChargingRequestBuilder to get instance of ChargingRequest(build will
 				create hash for you and validate your parameter). Once you have
-				ChargingRequest can call getUrl on it to get the request Url.<br>
+				ChargingRequest you can call getUrl on it to get the request Url.<br>
 				<b>Example :</b><br>
 				<code>
 					ChargingRequest chargingRequest =
@@ -130,10 +93,11 @@
 			<li><h4>QueryRequest</h4></li>
 			<p>
 				Building QueryRequest is very similar to ChargingRequest. Get the
-				builder, use setters and final fire build method to create
-				QueryRequest instance. Then take the url using getUrl and hit it or
-				use our WebClient to do the same. See utils/WebClient on how to do
-				it.<br> <b>Example</b><br>
+				builder, set the parameters and then use build method to create
+				QueryRequest instance. Once you have
+				QueryRequest instance you can call getUrl on it to get the request Url, hit it or
+				use our WebClient to do the same. See utils/WebClient.
+				<br> <b>Example</b><br>
 				<code>
 					QueryRequest queryRequest =
 					(QueryRequest.getBuilder()).setMerchantId(MERCHANT_ID)<br>
@@ -163,7 +127,7 @@
 			<p>Similar to QueryResponse.</p>
 			<li><h4>Utils/WebClient</h4></li>
 			<p>
-				In order to hit url for query and refund case you can use WebClient
+				In order to hit url for query and refund case(as these are server to server calls) you can use WebClient
 				from utils package.<br> <b>Example :</b><br>
 				<code>
 					QueryResponse queryResponse = new
