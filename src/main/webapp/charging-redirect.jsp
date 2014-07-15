@@ -12,8 +12,8 @@
 		<%ChargingRequest chargingRequest=(ChargingRequest)request.getAttribute("charging_params"); %>
 		<form name="formACS" action=<%out.println(ConfigReader.config.getProperty("CHARGING_URL")); %> method="post">
 			<%for(String k:chargingRequest.getRequestParams().keySet()){ %>
-				<input type="hidden" name=<%out.println(k); %>
-					value=<% out.println(chargingRequest.getRequestParams().get(k)); %> />
+				<input type="hidden" name="<%out.print(k); %>"
+					value="<% out.print(chargingRequest.getRequestParams().get(k)); %>" />
 			<%} %>
 		</form>
 	</body>
