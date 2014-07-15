@@ -81,10 +81,61 @@ select,textarea,input[type="text"],input[type="password"],input[type="datetime"]
 							<option>DEBIT</option>
 							<option>EMI</option>
 							<option>NET</option>
+							<option>CARD_CAPTURE</option>
 						</select>
 					</div>
 				</div>
 
+				<!-- Text input-->
+				<div class="control-group">
+					<label class="control-label">Card Name.</label>
+					<div class="controls">
+						<input id="name_on_card" name="name_on_card"
+							type="text" class="input-xlarge">
+
+					</div>
+				</div>
+
+<!-- Text input-->
+				<div class="control-group">
+					<label class="control-label">Card No.</label>
+					<div class="controls">
+						<input id="card_number" name="card_number"
+							type="text" class="input-xlarge">
+
+					</div>
+				</div>
+
+<!-- Text input-->
+				<div class="control-group">
+					<label class="control-label">CVV.</label>
+					<div class="controls">
+						<input id="cvv" name="cvv"
+							type="text" class="input-xlarge">
+
+					</div>
+				</div>
+
+<!-- Text input-->
+				<div class="control-group">
+					<label class="control-label">Expiry Month.</label>
+					<div class="controls">
+						<input id="expiry_month" name="expiry_month"
+							type="text" class="input-xlarge">
+
+					</div>
+				</div>
+
+<!-- Text input-->
+				<div class="control-group">
+					<label class="control-label">Expiry Year.</label>
+					<div class="controls">
+						<input id="expiry_year" name="expiry_year"
+							type="text" class="input-xlarge">
+
+					</div>
+				</div>
+				
 				<!-- Text input-->
 				<div class="control-group">
 					<label class="control-label">Merchant Transaction Id</label>

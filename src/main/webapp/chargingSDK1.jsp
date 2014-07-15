@@ -9,7 +9,7 @@
 <body>
 	<%
 		try
-		{
+		{	
 			ChargingRequest chargingRequest =
 			        (ChargingRequest.getBuilder()).setMerchantId(ConfigReader.config.getProperty("MERCHANT_ID"))
 			                .setMerchantKeyId(ConfigReader.config.getProperty("MERCHANT_KEY_ID"))
@@ -20,6 +20,11 @@
 			                .setCurrency(request.getParameter("currency"))
 			                .setUiMode(request.getParameter("ui_mode")).setHashMethod("sha256")
 			                .setTransactionType(request.getParameter("transaction_type"))
+			                .setNameOnCard(request.getParameter("name_on_card"))
+			                .setCardNumber(request.getParameter("card_number"))
+			                .setCVV(request.getParameter("cvv"))
+			                .setExpiryMonth(request.getParameter("expiry_month"))
+			                .setExpiryYear(request.getParameter("expiry_year"))
 			                .putParams("callback_url", ConfigReader.config.getProperty("CALLBACK_URL"))
 			                .build(ConfigReader.config.getProperty("SECRET_KEY"));
 
